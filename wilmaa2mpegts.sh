@@ -12,7 +12,7 @@ userAgent='Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:49.0) Gecko/20100101 Firefox
 # matterlau1-0, matterlau1-1, matterzrh1-0, matterzrh1-1
 
 videoServer="fr5-0"
-platform="hls5"
+platform="hls7"
 ssl_mode=1
 multi=0
 dolby=0
@@ -67,7 +67,7 @@ if [ -z $redirectURL ] ; then
         exit 1
 fi
 
-baseURL=$(echo $redirectURL | sed -e "s/\/master.m3u8.*//")
+baseURL=$(echo $redirectURL | sed -e "s/\/m.m3u8.*//")
 
 videoToken=$(echo $originalPlaylist | sed 's/.*=\([[:alnum:]]*\).*/\1/')
 
